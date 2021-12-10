@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import StarWars from "./components/Character";
+import styled from "styled-components";
+
+const StyledChars = styled.div`
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+`
+
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -29,13 +39,14 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div className="App">
+    <StyledChars className="App">
       <h1 className="Header">Characters</h1>
-      {characters.map((char, index) => {
+      {
+      characters.map((char, index) => {
       return <StarWars key={index} id={index + 1} info={char}/>
       })
       }
-    </div>
+    </StyledChars>
   );
 };
 
