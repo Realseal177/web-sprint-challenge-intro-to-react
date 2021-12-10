@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import StarWars from "./components/Character";
+import Details from "./components/Details";
 import styled from "styled-components";
 
 const StyledChars = styled.div`
@@ -21,7 +22,7 @@ const App = () => {
       axios
         .get(`https://swapi.dev/api/people`)
         .then((resp) => {
-          console.log(resp.data);
+          //console.log(resp.data);
           setCharacters(resp.data);
         })
         .catch((error) => {

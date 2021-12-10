@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyledWars = styled.div`
   h2 {
-    text-align: left;
+    /* text-align: left; */
     padding: 1%;
     font-family: 'Audiowide', cursive;
     text-shadow: 1px 1px 5px #fff;
@@ -20,7 +20,7 @@ export default function StarWars({ info }) {
 
   return (
     <StyledWars className="charList">
-      <h2 className="name">{info.name}{info.homeworld}</h2>
+      <h2 className="name">{info.name}</h2>
     </StyledWars>
   );
 }
